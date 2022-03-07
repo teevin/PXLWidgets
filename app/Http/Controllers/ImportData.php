@@ -103,8 +103,6 @@ class ImportData extends Controller
                 $card = CreditCard::where('number', $customer->credit_card->number)
                     ->where('email', $customer->email)
                     ->where('account_number', $customer->account)->get()->values()->all();
-                if(!$customer->email || !$customer->credit_card->expirationDate)
-                dd($card, $customer);
                 if (!$card) {
                     $this->accountHolder = AccountHolder::create([
                         "name"          => $customer->name,
