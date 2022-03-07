@@ -1,0 +1,6 @@
+Q. What if the source file suddenly becomes 500 times larger?
+A. I make use a lazy load that should be to process a huge file. The file processing should bbe moved to a another Job
+Q. Is the process easy to deploy for an XML or CSV file with similar content?
+A. You have as many filehandlers for the different file formats they should implement the FileHandlerInterface interface and will return an array of data.
+Q.Suppose that only records of which the credit card number contains three of the same numbers consecutively should be processed, how would you approach that?
+A. The collection can be sorted using the credit card number.
